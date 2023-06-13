@@ -1,39 +1,39 @@
-import mongoose from "mongoose"
-import validator from "validator"
-import bcrypt from "bcryptjs"
-const Userschema = new mongoose.Schema({
+import mongoose from "mongoose";
+import validator from "validator";
+import bcrypt from "bcryptjs";
 
+const Userschema = new mongoose.Schema({
     username: {
-        type: "string",
-        required: [true, "the name is required"]
+        type: String,
+        required: [true, "The name is required"],
     },
     email: {
-        type: "string",
-        required: [true, "the email is required"],
-        validator: [validator.isEmail, "Please enter a valid email address"],
+        type: String,
+        required: [true, "The email is required"],
+        validate: [validator.isEmail, "Please enter a valid email address"],
     },
     password: {
-        type: "string",
-        required: [true, "The password field does not be empty"],
+        type: String,
+        required: [true, "The password field cannot be empty"],
         minLength: 6,
         maxLength: 100,
-        select: false
+        select: false,
     },
-
     Usertype: {
-        type: 'String',
+        type: String,
         enum: ["admin", "employee", "manager"],
-        default: "admin"
+        default: "admin",
     },
     gender: {
-        type: "String",
+        type: String,
         enum: ["male", "female"],
-        default: "male"
+        default: "male",
     },
     passwordResetToken: String,
     passwordResetExpires: Date,
 
 });
+
 Userschema.pre("save", async function(next) {
     const user = this;
     if (!user.isModified("password")) return next();
@@ -44,5 +44,7 @@ Userschema.pre("save", async function(next) {
 Userschema.methods.correctPassword = async function(cpassword, password) {
     return await bcrypt.compare(cpassword, password);
 };
+
 const user = mongoose.model("User", Userschema);
+
 export default user;
