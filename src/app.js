@@ -4,8 +4,8 @@ import morgan from "morgan";
 import bodyParser from "body-parser";
 import registerRoutes from "./routes/register";
 import employeeRoutes from "./routes/addemploye";
-import contactusRouters from "./routes/contactus";
-
+import contactusRoutes from "./routes/contactus";
+import addsalarytoemployeeRoutes from "./routes/addsalarytoemployee"
 
 
 const app = express();
@@ -22,7 +22,11 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/v1", registerRoutes);
-app.use("/api/v1", employeeRoutes)
-app.use("/api/v1", contactusRouters)
+app.use("/api/v1", employeeRoutes);
+app.use("/api/v1", contactusRoutes);
+app.use("/api/v1", addsalarytoemployeeRoutes);
+
+
+
 
 export default app;

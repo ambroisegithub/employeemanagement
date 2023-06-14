@@ -1,6 +1,11 @@
 import mongoose from "mongoose"
 
 const addEmployeSchema = new mongoose.Schema({
+
+    employeeCode: {
+        type: "String",
+        required: [true, "The Code Of employee is required"]
+    },
     salution: {
         type: "String",
         required: [true, "the salution is required"],
