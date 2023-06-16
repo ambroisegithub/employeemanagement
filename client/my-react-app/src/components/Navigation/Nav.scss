@@ -1,0 +1,249 @@
+$backgroundcolor:white;
+$buttoncolor:#03346b;
+$textcolor:#1a5e5f;
+$navfooter:white;
+$textFont:13px;
+$font-family:Arial,
+sans-serif;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.teachme {
+    color: $buttoncolor;
+}
+
+.teachme1 {
+    color: $textcolor;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 900;
+}
+
+.signup {
+    background-color: #f0ad04;
+    text-align: center;
+    width: 70px;
+    height: 35px;
+    border-radius: 20px;
+}
+
+li {
+    .active,
+    .Link,
+    .Link1 {
+        text-decoration: none;
+    }
+}
+
+li {
+    .Link1 {
+        text-decoration: none;
+        text-align: center;
+        border: 1px solid $buttoncolor;
+        padding: 13px;
+        background-color: $backgroundcolor;
+        color: $textcolor;
+        font-family: $font-family;
+        font-weight: 600;
+    }
+}
+
+li {
+    .Link1:hover {
+        background-color: $buttoncolor;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        font-family: $font-family;
+        font-weight: 700;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+.contain {
+    max-width: 1170px;
+    margin: auto;
+    margin-top: 0px;
+}
+
+body {
+    padding-top: 50px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.header {
+    padding-top: 10px;
+    background-color: $navfooter;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    box-shadow: 0 2px 3px -1px #1a5e5f;
+}
+
+.header .logo,
+.header .nav {
+    // padding: 0px 15px;
+    margin-bottom: 2px;
+}
+
+.header .logo .Link {
+    font-size: 30px;
+    color: white;
+    text-transform: capitalize;
+}
+
+.active {
+    display: block;
+    font-size: 15px;
+    padding: 12px 0;
+    color: $buttoncolor;
+    text-transform: capitalize;
+    transition: all 0.5s ease;
+    font-weight: 700;
+    font-family: $font-family;
+}
+
+.active:hover {
+    cursor: pointer;
+    color: white;
+}
+
+.header .nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.header .nav ul li .Link {
+    display: block;
+    font-size: 15px;
+    padding: 12px 0;
+    color: $textcolor;
+    text-transform: capitalize;
+    transition: all 0.5s ease;
+    font-weight: 700;
+    font-family: $font-family;
+}
+
+.header .nav ul li .Link:hover,
+.header .nav ul li .Link.active {
+    color: $buttoncolor;
+    font-weight: 800;
+}
+
+.header #nav-check {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.nav-toggler {
+    height: 34px;
+    width: 44px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.nav-toggler span {
+    display: block;
+    height: 2px;
+    width: 20px;
+    background-color: white;
+    position: relative;
+}
+
+.nav-toggler span::before,
+.nav-toggler span::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 50px;
+    background-color: white;
+    left: 0px;
+}
+
+.nav-toggler span::before {
+    top: -6px;
+}
+
+.nav-toggler span::after {
+    top: 6px;
+}
+
+@media(max-width: 991px) {
+    .header .nav ul li .Link:hover,
+    .header .nav ul li .Link:focus {
+        font-weight: 800;
+        color: $buttoncolor;
+    }
+    .nav-toggler {
+        display: flex;
+    }
+    .header .logo .Link {
+        margin-left: -130px;
+        font-size: 30px;
+        color: white;
+        text-transform: capitalize;
+    }
+    .nav {
+        z-index: 1;
+        height: 800px;
+    }
+    .header .nav {
+        padding-top: 100px;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        background-color: $backgroundcolor;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        opacity: 0;
+        visibility: hidden;
+    }
+    .header .nav ul li {
+        display: block;
+        margin: 0;
+    }
+    .header #nav-check:checked~.nav {
+        opacity: 1;
+        visibility: visible;
+    }
+    .header #nav-check:checked~.nav-toggler span {
+        background-color: transparent;
+    }
+    .header #nav-check:checked~.nav-toggler span::before {
+        top: 0;
+        transform: rotate(45deg);
+    }
+    .header #nav-check:checked~.nav-toggler span::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+}
+
+.nav ul {
+    margin-top: 15px;
+}
