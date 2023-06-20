@@ -1,0 +1,18 @@
+$backgroundcolor:white;
+$buttoncolor:#03346b;
+$textcolor:#1a5e5f;
+$navfooter:white;
+$textFont:13px;
+$font-family:Arial,
+sans-serif;
+.Teamcare {
+    p {
+        color: $textcolor;
+        font-size: 45px;
+        font-weight: 900;
+        font-family: $font-family;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 50px;
+    }
+}

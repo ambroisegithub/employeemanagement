@@ -1,0 +1,60 @@
+$backgroundcolor:white;
+$buttoncolor:#03346b;
+$textcolor:#1a5e5f;
+$navfooter:white;
+$textFont:13px;
+$font-family:Arial,
+sans-serif;
+.container-flex {
+    background: linear-gradient(rgba(253, 254, 255, 0.11), rgb(7, 8, 39)), url(../image/team10.jpg);
+    background-position: center;
+    background-size: cover;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    padding-top: 400px;
+    margin-bottom: 20px;
+    .sucusses1 {
+        color: white;
+        font-family: $font-family;
+        font-size: 40px;
+        font-weight: 900;
+        &:hover {
+            color: #1679eb;
+            cursor: pointer;
+        }
+    }
+    .explore {
+        margin-top: 15px;
+        margin-bottom: 20px;
+        .explore1 {
+            padding: 15px;
+            background-color: $buttoncolor;
+            text-decoration: none;
+            color: white;
+            font-family: $font-family;
+            font-weight: 800;
+            border-radius: 15px;
+            -webkit-border-radius: 15px;
+            -moz-border-radius: 15px;
+            -ms-border-radius: 15px;
+            -o-border-radius: 15px;
+            &:hover {
+                background-color: $textcolor;
+            }
+        }
+    }
+    .More {
+        margin-top: 180px;
+        width: 87%;
+        height: 100px;
+        background-color: $textcolor;
+        margin-left: 100px;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+    }
+}
