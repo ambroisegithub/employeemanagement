@@ -1,0 +1,88 @@
+            $backgroundcolor:white;
+            $buttoncolor:#03346b;
+            $textcolor:#1a5e5f;
+            $navfooter:white;
+            $textFont:13px;
+            $font-family:Arial;
+            $font-family:Arial;
+            .containerFooter {
+                height: 40vh;
+                background-color: $buttoncolor;
+                margin-top: 5px;
+                .containerrow1 {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    grid-gap: 20px;
+                    width: 100%;
+                    height: auto;
+                    border-bottom: 1px solid rgb(150, 150, 150);
+                }
+                .rowFooter {
+                    padding: 30px;
+                    height: 35vh;
+                    // background-color: $textcolor;
+                    .joy {
+                        margin-top: 15px;
+                        color: white;
+                        font-family: $font-family;
+                        font-size: 15px;
+                        font-weight: 700;
+                    }
+                    .stay {
+                        color: white;
+                        margin-top: 20px;
+                        font-size: 20px;
+                        font-weight: 500;
+                        ;
+                    }
+                    .team {
+                        color: white
+                    }
+                    .teamx {
+                        color: $textcolor;
+                    }
+                    h2 {
+                        margin-bottom: 20px;
+                        color: white;
+                        font-weight: 900;
+                        font-size: 30px;
+                        padding-bottom: 5px;
+                        border-bottom: 3px solid $textcolor;
+                        width: 100%;
+                    }
+                    .footerLink {
+                        color: white;
+                        text-decoration: none;
+                        margin-bottom: 20px;
+                        font-weight: 400;
+                        font-family: $font-family;
+                    }
+                    p {
+                        margin-bottom: 15px;
+                    }
+                }
+                .socialMediaicons {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-gap: 2px;
+                    width: 100%;
+                    // background-color: white;
+                    height: 5vh;
+                    .copyright,
+                    .socialIcons {
+                        // background-color: black;
+                        height: 99%;
+                        width: 100%;
+                        color: white;
+                        padding-top: 5px;
+                        text-align: center;
+                        .twitter {
+                            color: white;
+                            text-decoration: none;
+                            font-weight: 800;
+                            font-size: 20px;
+                            margin-left: 20px;
+                        }
+                    }
+                }
+            }

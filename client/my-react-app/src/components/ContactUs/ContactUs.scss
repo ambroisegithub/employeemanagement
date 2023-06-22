@@ -1,13 +1,106 @@
-$backgroundcolor:white;
-$buttoncolor:#03346b;
-$textcolor:#1a5e5f;
-$navfooter:white;
-$textFont:13px;
-$font-family:Arial;
-$font-family:Arial;
-.ContactUsContainer {
-    width: 100%;
-    height: 100vh;
-    background-color: $textcolor;
-    margin-top: 5px;
-}
+                                $backgroundcolor:white;
+                                $buttoncolor:#03346b;
+                                $textcolor:#1a5e5f;
+                                $navfooter:white;
+                                $textFont:13px;
+                                $font-family:Arial;
+                                $font-family:Arial;
+                                .ContactUsContainer {
+                                    width: 100%;
+                                    height: 100vh;
+                                    background-color: $textcolor;
+                                    display: flex;
+                                    flex-direction: row;
+                                    gap: 10px;
+                                    margin-top: 10px;
+                                    padding-left: 50px;
+                                    padding-top: 40px;
+                                    .ContactUsRow {
+                                        width: 30%;
+                                        height: 97%;
+                                        // background-color: $buttoncolor;
+                                        margin-top: 5px;
+                                        img {
+                                            width: 100%;
+                                            height: 100%;
+                                        }
+                                    }
+                                    .ContactUsRow1 {
+                                        display: flex;
+                                        flex-direction: column;
+                                        width: 69%;
+                                        height: 97%;
+                                        // background-color: white;
+                                        margin-top: 5px;
+                                        .contact1 {
+                                            padding-left: 5px;
+                                            padding-top: 20px;
+                                            h1 {
+                                                font-family: $font-family;
+                                                color: white;
+                                                font-weight: 700;
+                                                font-size: 40px;
+                                            }
+                                            p {
+                                                font-family: $font-family;
+                                                font-size: 16px;
+                                                font-weight: 600;
+                                                color: white;
+                                                width: 90%;
+                                            }
+                                            label {
+                                                font-family: $font-family;
+                                                font-size: 15px;
+                                                font-weight: 800;
+                                                color: white;
+                                            }
+                                            input {
+                                                margin-bottom: 15px;
+                                                border: none;
+                                                outline: none;
+                                                width: 90%;
+                                                font-size: 16px;
+                                                font-weight: 600;
+                                                color: black;
+                                                background-color: $textcolor;
+                                                border-bottom: 3px solid white;
+                                            }
+                                            textarea {
+                                                outline: none;
+                                                border: none;
+                                                border-bottom: 4px solid white;
+                                                width: 90%;
+                                                font-size: 17px;
+                                                color: black;
+                                                font-weight: 500;
+                                                font-family: $font-family;
+                                                margin-top: 15px;
+                                                margin-bottom: 10px;
+                                                background-color: $textcolor;
+                                            }
+                                            button {
+                                                padding-top: 20px;
+                                                padding-left: 40px;
+                                                padding-bottom: 20px;
+                                                padding-right: 40px;
+                                                color: white;
+                                                text-align: center;
+                                                font-family: $font-family;
+                                                border: 1px solid white;
+                                                border-radius: 10px;
+                                                -webkit-border-radius: 10px;
+                                                -moz-border-radius: 10px;
+                                                -ms-border-radius: 10px;
+                                                -o-border-radius: 10px;
+                                                background-color: $textcolor;
+                                                font-weight: 800;
+                                                font-size: 17px;
+                                                &:hover {
+                                                    color: $buttoncolor;
+                                                    background-color: white;
+                                                    cursor: pointer;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }

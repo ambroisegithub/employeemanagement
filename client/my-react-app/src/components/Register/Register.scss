@@ -1,0 +1,173 @@
+    $backgroundcolor:white;
+    $buttoncolor:#03346b;
+    $textcolor:#1a5e5f;
+    $navfooter:white;
+    $textFont:13px;
+    $font-family:Arial,
+    sans-serif;
+    .containerRegister {
+        width: 100%;
+        height: 80vh;
+        background-color: $textcolor;
+        align-items: center;
+        justify-content: center;
+        // text-align: center;
+        padding-left: 20vh;
+        padding-right: 20vh;
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+        .rowContainer {
+            border-radius: 10px;
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            height: 70vh;
+            background-color: white;
+            justify-content: center;
+            padding-top: 1%;
+            padding-top: 1%;
+            .simply1 {
+                padding-left: 20px;
+                padding-top: 30px;
+                padding-bottom: 30px;
+                width: 80%;
+                background-color: $textcolor;
+                border-radius: 10px;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                -ms-border-radius: 10px;
+                -o-border-radius: 10px;
+                width: 80%;
+                color: #fff;
+            }
+            .register {
+                padding: 10px;
+                width: 45%;
+                height: 98%;
+                background-color: skyblue;
+                .signupheader {
+                    padding-bottom: 5px;
+                }
+                .dont {
+                    padding-bottom: 10px;
+                }
+            }
+            .register1 {
+                border-radius: 10px;
+                width: 50%;
+                height: 98%;
+                background-color: $buttoncolor;
+                padding: 30px;
+                h1 {
+                    color: white;
+                    padding-bottom: 20px;
+                }
+                .start {
+                    width: 40%;
+                    // background-color: red;
+                    font-size: 30px;
+                    font-weight: 800;
+                    color: white;
+                    padding-bottom: 30px;
+                }
+                .image1 {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 2px;
+                    p {
+                        padding-top: 20px;
+                        padding-left: 20px;
+                    }
+                }
+                .image {
+                    width: 60px;
+                    height: 60px;
+                    justify-content: center;
+                    border-radius: 10px;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 10px;
+                        -webkit-border-radius: 10px;
+                        -moz-border-radius: 10px;
+                        -ms-border-radius: 10px;
+                        -o-border-radius: 10px;
+                    }
+                }
+            }
+            .explain {
+                width: 70%;
+                padding-bottom: 10px;
+                margin-bottom: 20px;
+                color: $textcolor;
+                font-weight: 800;
+            }
+            .simply {
+                width: 90%;
+                font-weight: 800;
+                padding-bottom: 20px;
+            }
+        }
+        form {
+            .googleButton {
+                display: flex;
+                flex-direction: row;
+                gap: 5px;
+            }
+            .whoare {
+                padding-bottom: 10px;
+            }
+            .radio {
+                background-color: white;
+            }
+            .radioContainer {
+                display: flex;
+                flex-direction: row;
+                gap: 5px;
+                .radioInput {
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    text-align: center;
+                    width: 120px;
+                    border: 2px solid $textcolor;
+                    border-radius: 5px;
+                    -webkit-border-radius: 5px;
+                    -moz-border-radius: 5px;
+                    -ms-border-radius: 5px;
+                    -o-border-radius: 5px;
+                }
+            }
+            .name,
+            .email,
+            .password {
+                margin-top: 5px;
+                padding: 10px;
+                width: 72%;
+                border: 2px solid $textcolor;
+                font-size: large;
+                outline: none;
+                border-radius: 5px;
+                &::placeholder {
+                    color: $textcolor;
+                    font-weight: 500;
+                }
+            }
+            .signup1 {
+                margin-top: 3px;
+                padding: 10px;
+                padding-left: 20px;
+                padding-right: 20px;
+                border: none;
+                color: white;
+                background-color: $textcolor;
+                cursor: pointer;
+                font-weight: 800;
+            }
+            .labelInput {
+                font-size: 15px;
+                color: $buttoncolor;
+                font-family: $font-family;
+                font-weight: 900;
+            }
+        }
+    }
