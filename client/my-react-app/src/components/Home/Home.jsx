@@ -20,11 +20,9 @@ const Home =()=> {
 
      <div className="explore">
             {/* <button onClick={handleNavigateExplore} className="explore1">Explore More</button> */}
-            <Link  className="explore1">Explore More</Link>
+            <Link to="/DiscoverJob" className="explore1">Explore More</Link>
     </div>
-    <div className="More">
-        <h1>Motivator</h1>
-    </div>
+
 </div>
 
 
