@@ -19,7 +19,7 @@ function Nav() {
                      <li><Link to="dashboard" className="Link">About</Link></li>
                      <li><Link href="projects.html" className="Link">Portifolio</Link></li>
                      <li><Link href="register.html" className="Link">Pages</Link></li>
-                     <li><Link to="/Dashboard" className="Link">Dashboard</Link></li>
+                     <li><Link to="/dashboard" className="Link">Dashboard</Link></li>
                      <li><Link href="contact.html" className="Link">Contact</Link></li>
                      <li><Link to="/Signup" className="Link">Register</Link></li>
                      &nbsp; &nbsp; &nbsp; 

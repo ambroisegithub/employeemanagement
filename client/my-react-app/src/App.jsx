@@ -9,23 +9,16 @@ import Position from "./components/Position/Position"
 import ContactUs from "./components/ContactUs/ContactUs"
 import Footer from "./components/Footer/Footer"
 
-
-
-
 const  App=()=> {
-
-
   return (
 <>
 <div>
-
 <Nav /> 
 </div>
 <br></br>
 <br></br>
 <br></br>
 <br></br>
-
  <div>
 <Home/> 
  </div>
