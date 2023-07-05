@@ -1,7 +1,15 @@
+$backgroundcolor:white;
+$buttoncolor:#03346b;
+$textcolor:#1a5e5f;
+$navfooter:white;
+$textFont:13px;
+$font-family:Arial;
+$font-family:Arial;
 .NavSidebar {
-    height: 200px;
+    height: 100px;
     width: 100%;
-    background-color: skyblue;
+    background-color: $buttoncolor;
     margin: 0;
     padding: 0;
+    color: white;
 }

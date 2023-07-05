@@ -1,22 +1,19 @@
-import SideBar from './SideBar/SideBar.jsx'
-import { Outlet} from 'react-router-dom'
-import NavSideBar from "./SideBar/NavSideBar.jsx"
+
 
 import './Dashboard.scss'
 const  Dashboard = ()=> {
   return (
 <div>
-<NavSideBar/>
-
+{/* <NavSideBar/>
     <div className='SidebarLink'>
-          <div style={{width:"20%",height:"100vh",backgroundColor:"#05108d4f"}}>
+          <div style={{width:"16%",backgroundColor:"blue",height:"100vh",color:"white",marginRight:"2%"}}>
                <SideBar/>
           </div>
 
-         <div style={{backgroundColor:"red",width:"80%",height:"100vh"}}>
+         <div style={{backgroundColor:"red",width:"80%",height:"92vh",marginTop:"4vh",marginBottom:"4vh"}}>
               <Outlet ></Outlet>
          </div>
-    </div>
+    </div> */}
 
 </div>
   )
