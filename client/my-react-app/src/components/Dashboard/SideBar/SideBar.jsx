@@ -1,77 +1,96 @@
-import  { useState } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import {
-  FaTh,
-  FaBars,
-  FaUserAlt,
-  FaRegChartBar,
-  FaCommentAlt,
-  FaShoppingBag,
-  FaThList
-} from "react-icons/fa";
+import { FaTh, FaUserAlt, FaRegChartBar, FaCommentAlt, FaShoppingBag, FaThList } from 'react-icons/fa';
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { NavLink } from 'react-router-dom';
 
 const SideBar = ({ children }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
+  const [selectedPath, setSelectedPath] = useState(null);
+  const [isCloseBarClicked, setCloseBarClicked] = useState(false);
 
-  const toggle = () => setIsOpen(!isOpen);
+  const toggleSidebar = () => {
+    setSidebarOpen(!isSidebarOpen);
+    setCloseBarClicked(!isCloseBarClicked);
+  };
+
+  const handleMenuItemClick = (path) => {
+    setSelectedPath(path);
+    setSidebarOpen(false);
+  };
 
   const menuItem = [
     {
-      path: "/dashboard/blog",
-      name: "Dashboard",
-      icon: <FaTh />
+      path: '/dashboard/blog',
+      name: 'Dashboard',
+      icon: <FaTh />,
     },
     {
-      path: "/dashboard/about",
-      name: "About",
-      icon: <FaUserAlt />
+      path: '/dashboard/about',
+      name: 'About',
+      icon: <FaUserAlt />,
     },
     {
-      path: "/dashboard/analytics",
-      name: "Analytics",
-      icon: <FaRegChartBar />
+      path: '/dashboard/analytics',
+      name: 'Analytics',
+      icon: <FaRegChartBar />,
     },
     {
-      path: "/dashboard/comment",
-      name: "Comment",
-      icon: <FaCommentAlt />
+      path: '/dashboard/comment',
+      name: 'Comment',
+      icon: <FaCommentAlt />,
     },
     {
-      path: "/dashboard/product",
-      name: "Product",
-      icon: <FaShoppingBag />
+      path: '/dashboard/product',
+      name: 'Product',
+      icon: <FaShoppingBag />,
     },
     {
-      path: "/dashboard/productList",
-      name: "Product List",
-      icon: <FaThList />
-    }
+      path: '/dashboard/productList',
+      name: 'Product List',
+      icon: <FaThList />,
+    },
   ];
 
   return (
-    <div className="container">
-      <div style={{ width: isOpen ? "200px" : "50px" }} className="sidebar">
-        <div className="top_section">
-          <h1 style={{ display: isOpen ? "block" : "none" }} className="logo">Logo</h1>
-          <div style={{ marginLeft: isOpen ? "50px" : "0px" }} className="bars">
-            <FaBars onClick={toggle} />
+    <>
+      <div className="dashboardContainer">
+        <div className="navigationContainer" style={{ backgroundColor: 'indigo', width: '100%', color: 'white', height: '100px' }}>
+          <div className="top_section">
+            <div className="bars">
+              {!isSidebarOpen ? (
+                <AiOutlineMenu className="bar" onClick={toggleSidebar} />
+              ) : (
+                <AiOutlineClose className="bar" onClick={toggleSidebar} />
+              )}
+            </div>
           </div>
         </div>
-        {menuItem.map((item, index) => (
-          <NavLink to={item.path} key={index} className="link" activeClassName="active">
-            <div className="icon">{item.icon}</div>
-            <div style={{ display: isOpen ? "block" : "none" }} className="link_text">{item.name}</div>
-          </NavLink>
-        ))}
+
+        <div className={`container ${isSidebarOpen ? 'sidebarOpen' : ''}`}>
+          <div className={`sidebarContainer ${isCloseBarClicked ? 'hideIcons' : ''}`}>
+            {menuItem.map((item, index) => (
+              <NavLink
+                to={item.path}
+                key={index}
+                className={`link ${selectedPath === item.path ? 'active' : ''}`}
+                onClick={() => handleMenuItemClick(item.path)}
+              >
+                <div className="icon">{item.icon}</div>
+                <div className="link_text">{item.name}</div>
+              </NavLink>
+            ))}
+          </div>
+
+          <main>{children}</main>
+        </div>
       </div>
-      <main>{children}</main>
-    </div>
+    </>
   );
 };
 
 SideBar.propTypes = {
-     children: PropTypes.node.isRequired
-   };
+  children: PropTypes.node.isRequired,
+};
 
 export default SideBar;

@@ -15,6 +15,8 @@ import Analytics from './components/Dashboard/Pages/Analytics';
 import Product from './components/Dashboard/Pages/Product';
 import ProductList from './components/Dashboard/Pages/ProductList';
 import Blog from './components/Dashboard/Pages/Blog';
+import Home from './components/Dashboard/Pages/Home';
+
 
 import './index.css';
 
@@ -22,6 +24,7 @@ const Dashboard = () => {
   return (
     <Sidebar>
       <Routes>
+        <Route index  element={<Home/>}></Route>
         <Route path="blog" element={<Blog />} />
         <Route path="about" element={<About />} />
         <Route path="comment" element={<Comment />} />
