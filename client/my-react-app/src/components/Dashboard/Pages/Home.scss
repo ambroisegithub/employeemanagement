@@ -1,0 +1,58 @@
+$backgroundcolor:white;
+$buttoncolor:#03346b;
+$textcolor:#1a5e5f;
+$navfooter:white;
+$textFont:13px;
+$font-family:Arial;
+$font-family:Arial;
+.HomeContainer {
+    width: 100%;
+    height: auto;
+    background-color: skyblue;
+    .HomeRow {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+        .totalDetail {
+            width: 100%;
+            height: 80px;
+            background-color: red;
+        }
+    }
+}
+
+@media (max-width: 448px) {
+    .HomeContainer {
+        width: 100%;
+        height: auto;
+        background-color: skyblue;
+        .HomeRow {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px;
+            .totalDetail {
+                width: 100%;
+                height: 80px;
+                background-color: red;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .HomeContainer {
+        width: 100%;
+        height: auto;
+        background-color: skyblue;
+        .HomeRow {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px;
+            .totalDetail {
+                width: 100%;
+                height: 80px;
+                background-color: red;
+            }
+        }
+    }
+}

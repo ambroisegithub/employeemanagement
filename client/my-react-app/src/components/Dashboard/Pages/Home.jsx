@@ -1,8 +1,13 @@
-
+import './Home.scss'
 const  Home = ()=> {
     return (
-      <div>
-        <h1>Welcome To Booked</h1>
+      <div className="HomeContainer">
+          <div className="HomeRow">
+            <div className="totalDetail"></div>
+            <div className="totalDetail"></div>
+            <div className="totalDetail"></div>
+            <div className="totalDetail"></div>
+          </div>
       </div>
     )
   }

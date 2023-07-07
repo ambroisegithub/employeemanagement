@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import PropTypes from 'prop-types';
 import { FaTh, FaUserAlt, FaRegChartBar, FaCommentAlt, FaShoppingBag, FaThList } from 'react-icons/fa';
-import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
-import { NavLink } from 'react-router-dom';
+import {GrNotification} from 'react-icons/gr';
 
+import { AiOutlineMenu, AiOutlineClose,AiOutlineSearch } from 'react-icons/ai';
+import { NavLink } from 'react-router-dom';
+import  ProfileImage from "../image/user-profile-icon.png"
 const SideBar = ({ children }) => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
   const [selectedPath, setSelectedPath] = useState(null);
@@ -55,7 +57,11 @@ const SideBar = ({ children }) => {
   return (
     <>
       <div className="dashboardContainer">
-        <div className="navigationContainer" style={{ backgroundColor: 'indigo', width: '100%', color: 'white', height: '100px' }}>
+        <div className="navigationContainer" >
+          <div className='LogoContainer'  style={{justifyContent:"space-around"}}>
+          <div >
+              <NavLink className="LogoEmps">EMS</NavLink>
+          </div>
           <div className="top_section">
             <div className="bars">
               {!isSidebarOpen ? (
@@ -65,6 +71,33 @@ const SideBar = ({ children }) => {
               )}
             </div>
           </div>
+          <div className='searchcontainer'>
+            <input type="text" placeholder='Search'></input>
+            <button><AiOutlineSearch/></button>
+          </div>
+          
+          {/* <div className='NotificationProfile'>
+              <img src={ProfileImage} alt=""  style={{color:"white",backgroundColor:"white",borderRadius:"100%",border:"1px solid White"}}/>
+          </div> */}
+<div style={{width:"50%",height:"auto",float:"left",paddingTop:"5px"}}>
+  <ul style={{display:"flex",flexDirection:"row",flexWrap:"wrap",listStyle:"none",justifyContent:"space-between"}}>
+    
+  <li></li>
+
+    <li>
+    <ul style={{display:"flex",flexDirection:"row",gap:"20px",paddingTop:"10px"}}>
+      <li><button  style={{borderRadius:"100%",border:"1px solid white",padding:"5px"}}><GrNotification /></button></li>
+      <li><button style={{borderRadius:"100%",border:"1px solid white",padding:"5px"}}><GrNotification/></button></li>
+    </ul>
+    </li>
+    <li><img src={ProfileImage} alt="" style={{width:"40px",height:"40px",backgroundColor:"white",borderRadius:"100%",border:"1px solid white"}}/></li>
+
+  </ul>
+</div>
+          </div>
+
+
+
         </div>
 
         <div className={`container ${isSidebarOpen ? 'sidebarOpen' : ''}`}>
