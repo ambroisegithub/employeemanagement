@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import { FaTh, FaUserAlt, FaRegChartBar, FaCommentAlt, FaShoppingBag, FaThList } from 'react-icons/fa';
 import {GrNotification} from 'react-icons/gr';
 
-import { AiOutlineMenu, AiOutlineClose,AiOutlineSearch } from 'react-icons/ai';
+import { AiOutlineMenu, AiOutlineClose} from 'react-icons/ai';
+import {FaUsers} from "react-icons/fa";
 import { NavLink } from 'react-router-dom';
 import  ProfileImage from "../image/user-profile-icon.png"
 const SideBar = ({ children }) => {
@@ -82,12 +83,9 @@ const SideBar = ({ children }) => {
           
           </div>
 
-          
-          {/* <div className='NotificationProfile'>
-              <img src={ProfileImage} alt=""  style={{color:"white",backgroundColor:"white",borderRadius:"100%",border:"1px solid White"}}/>
-          </div> */}
+
 <div style={{width:"50%",height:"auto",paddingTop:"5px"}}>
-  <ul style={{display:"flex",flexDirection:"row",flexWrap:"wrap",listStyle:"none",backgroundColor:"skyblue",justifyContent:"center"}}>
+  <ul style={{display:"flex",flexDirection:"row",listStyle:"none",justifyContent:"space-between"}}>
     
   <li></li>
 

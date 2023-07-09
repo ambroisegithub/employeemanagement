@@ -24,17 +24,16 @@ body {
 }
 
 .LogoContainer {
+    width: auto;
     display: flex;
     flex-direction: row;
-    // gap: 50px;
-    // justify-content: space-between;
-    background-color: blue;
+    justify-content: space-between;
+    // background-color: red;
     .LogoEmps {
         color: white;
         font-weight: 900;
         font-size: 30px;
-        background-color: rebeccapurple;
-        width: 110px;
+        // background-color: rebeccapurple;
         cursor: pointer;
         &:hover {
             color: white;
@@ -43,19 +42,19 @@ body {
     .searchcontainer {
         display: flex;
         flex-direction: row;
-        // padding-top: 5px;
-        // padding-left: 20px;
         .inputSearch {
             outline: none;
-            border-radius: 10px;
+            border-radius: 5px;
             border: none;
             color: black;
             font-weight: 800;
-            // width: 100px;
-            height: 40px;
+            width: 80px;
+            height: 10px;
+            padding: 10px;
+            margin-top: 13px;
+            margin-left: 10px;
         }
         button {
-            margin-left: -20px;
             background-color: white;
             border: none;
             color: grey;
@@ -68,15 +67,15 @@ body {
     .sectionContainer {
         display: flex;
         flex-direction: row;
-        gap: 10px;
-        background-color: yellow;
-        padding-right: 20px;
+        gap: 0px;
+        // background-color: blue;
+        padding-right: 10px;
     }
 }
 
 .navigationContainer {
     background-color: #031427;
-    width: 100%;
+    width: auto;
     color: white;
     height: 100px;
     border-bottom: 2px solid gray;
@@ -90,7 +89,7 @@ body {
 }
 
 main {
-    // overflow-x: hidden;
+    overflow-x: hidden;
     width: 100%;
     padding: 20px;
 }
@@ -141,12 +140,14 @@ main {
         .inputSearch {
             padding: 5px;
             outline: none;
-            border-radius: 10px;
+            border-radius: 5px;
             border: none;
             color: black;
             font-weight: 800;
             width: 100px;
-            height: 10px;
+            height: 0px;
+            // margin-top: -10px;
+            // margin-left: 20px;
         }
     }
     .sidebarContainer {
@@ -157,13 +158,16 @@ main {
     }
     .LogoContainer {
         justify-content: center;
+        .LogoEmps {
+            font-size: 20px;
+        }
     }
     .navigationContainer {
         .top_section {
             .bars {
                 .bar {
                     display: block;
-                    font-size: 50px;
+                    // font-size: 50px;
                     font-weight: 900;
                 }
             }
@@ -181,7 +185,7 @@ main {
             color: black;
             font-weight: 800;
             // width: 100px;
-            height: 5px;
+            height: 0px;
         }
     }
     .navigationContainer {
@@ -189,7 +193,7 @@ main {
             .bars {
                 .bar {
                     display: block;
-                    font-size: 50px;
+                    // font-size: 50px;
                 }
             }
         }
