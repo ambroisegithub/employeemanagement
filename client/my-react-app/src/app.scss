@@ -11,12 +11,12 @@ body {
     text-decoration: none;
     margin: 0;
     padding: 0;
-}
-
-* {
     overflow-x: hidden;
 }
 
+// * {
+//     overflow-x: hidden;
+// }
 .dashboardContainer {
     display: flex;
     flex-direction: column;
@@ -27,10 +27,14 @@ body {
     display: flex;
     flex-direction: row;
     // gap: 50px;
+    // justify-content: space-between;
+    background-color: blue;
     .LogoEmps {
         color: white;
         font-weight: 900;
-        font-size: 20px;
+        font-size: 30px;
+        background-color: rebeccapurple;
+        width: 110px;
         cursor: pointer;
         &:hover {
             color: white;
@@ -39,18 +43,19 @@ body {
     .searchcontainer {
         display: flex;
         flex-direction: row;
-        padding-top: 10px;
-        padding-left: 50px;
-        input {
+        // padding-top: 5px;
+        // padding-left: 20px;
+        .inputSearch {
             outline: none;
-            padding: 10px;
             border-radius: 10px;
             border: none;
             color: black;
             font-weight: 800;
+            // width: 100px;
+            height: 40px;
         }
         button {
-            margin-left: -28px;
+            margin-left: -20px;
             background-color: white;
             border: none;
             color: grey;
@@ -59,6 +64,13 @@ body {
             font-size: 20px;
             cursor: pointer;
         }
+    }
+    .sectionContainer {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        background-color: yellow;
+        padding-right: 20px;
     }
 }
 
@@ -78,6 +90,7 @@ body {
 }
 
 main {
+    // overflow-x: hidden;
     width: 100%;
     padding: 20px;
 }
@@ -115,7 +128,7 @@ main {
 
 .bars {
     .bar {
-        display: none;
+        display: block;
     }
 }
 
@@ -124,6 +137,18 @@ main {
 }
 
 @media (max-width: 448px) {
+    .searchcontainer {
+        .inputSearch {
+            padding: 5px;
+            outline: none;
+            border-radius: 10px;
+            border: none;
+            color: black;
+            font-weight: 800;
+            width: 100px;
+            height: 10px;
+        }
+    }
     .sidebarContainer {
         width: 60px;
         .link_text {
@@ -139,7 +164,7 @@ main {
                 .bar {
                     display: block;
                     font-size: 50px;
-                    font-weight:900;
+                    font-weight: 900;
                 }
             }
         }
@@ -147,6 +172,18 @@ main {
 }
 
 @media (max-width: 768px) {
+    .searchcontainer {
+        .inputSearch {
+            padding: 5px;
+            outline: none;
+            border-radius: 10px;
+            border: none;
+            color: black;
+            font-weight: 800;
+            // width: 100px;
+            height: 5px;
+        }
+    }
     .navigationContainer {
         .top_section {
             .bars {

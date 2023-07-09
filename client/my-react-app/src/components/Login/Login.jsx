@@ -20,6 +20,7 @@ const Login = ()=>{
         <br></br>
         <br></br>
         <div  className="containerLogin">
+            <center>
               <div className="rowContainer">
                      <div className="Login">
                         <h1 className="Loginupheader">Login</h1>
@@ -45,10 +46,11 @@ const Login = ()=>{
                                </form>
                      </div>
             </div>
+            </center>
         </div>
-        <div>
+        {/* <div>
             <Footer/>
-        </div>
+        </div> */}
         </>
     )
 }

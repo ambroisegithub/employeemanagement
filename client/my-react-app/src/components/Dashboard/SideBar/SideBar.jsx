@@ -58,7 +58,11 @@ const SideBar = ({ children }) => {
     <>
       <div className="dashboardContainer">
         <div className="navigationContainer" >
-          <div className='LogoContainer'  style={{justifyContent:"space-around"}}>
+
+          <div className='LogoContainer'  >
+
+
+          <div className='sectionContainer'>
           <div >
               <NavLink className="LogoEmps">EMS</NavLink>
           </div>
@@ -72,15 +76,18 @@ const SideBar = ({ children }) => {
             </div>
           </div>
           <div className='searchcontainer'>
-            <input type="text" placeholder='Search'></input>
-            <button><AiOutlineSearch/></button>
+            <input type="text" placeholder='Search' className='inputSearch'></input>
+           
           </div>
+          
+          </div>
+
           
           {/* <div className='NotificationProfile'>
               <img src={ProfileImage} alt=""  style={{color:"white",backgroundColor:"white",borderRadius:"100%",border:"1px solid White"}}/>
           </div> */}
-<div style={{width:"50%",height:"auto",float:"left",paddingTop:"5px"}}>
-  <ul style={{display:"flex",flexDirection:"row",flexWrap:"wrap",listStyle:"none",justifyContent:"space-between"}}>
+<div style={{width:"50%",height:"auto",paddingTop:"5px"}}>
+  <ul style={{display:"flex",flexDirection:"row",flexWrap:"wrap",listStyle:"none",backgroundColor:"skyblue",justifyContent:"center"}}>
     
   <li></li>
 
@@ -95,9 +102,6 @@ const SideBar = ({ children }) => {
   </ul>
 </div>
           </div>
-
-
-
         </div>
 
         <div className={`container ${isSidebarOpen ? 'sidebarOpen' : ''}`}>
