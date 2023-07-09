@@ -4,7 +4,6 @@ import { FaTh, FaUserAlt, FaRegChartBar, FaCommentAlt, FaShoppingBag, FaThList }
 import {GrNotification} from 'react-icons/gr';
 
 import { AiOutlineMenu, AiOutlineClose} from 'react-icons/ai';
-import {FaUsers} from "react-icons/fa"
 import { NavLink } from 'react-router-dom';
 import  ProfileImage from "../image/user-profile-icon.png"
 const SideBar = ({ children }) => {

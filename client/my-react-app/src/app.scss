@@ -4,6 +4,7 @@ $textcolor:#79a4a5;
 $navfooter:white;
 $textFont:13px;
 $font-family:Arial;
+$sidebarcolor: #031427;
 body {
     box-sizing: border-box;
     margin: 0;
@@ -14,9 +15,6 @@ body {
     overflow-x: hidden;
 }
 
-// * {
-//     overflow-x: hidden;
-// }
 .dashboardContainer {
     display: flex;
     flex-direction: column;
@@ -28,12 +26,10 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    // background-color: red;
     .LogoEmps {
         color: white;
         font-weight: 900;
         font-size: 30px;
-        // background-color: rebeccapurple;
         cursor: pointer;
         &:hover {
             color: white;
@@ -127,7 +123,7 @@ main {
 
 .bars {
     .bar {
-        display: block;
+        display: none;
     }
 }
 
@@ -146,8 +142,6 @@ main {
             font-weight: 800;
             width: 100px;
             height: 0px;
-            // margin-top: -10px;
-            // margin-left: 20px;
         }
     }
     .sidebarContainer {
@@ -166,8 +160,7 @@ main {
         .top_section {
             .bars {
                 .bar {
-                    display: block;
-                    // font-size: 50px;
+                    display: none;
                     font-weight: 900;
                 }
             }
@@ -184,7 +177,6 @@ main {
             border: none;
             color: black;
             font-weight: 800;
-            // width: 100px;
             height: 0px;
         }
     }
