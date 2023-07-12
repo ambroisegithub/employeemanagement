@@ -13,7 +13,7 @@ const Tabledash = () => {
           <tr>
             <th>User Id</th>
             <th>User Name</th>
-            <th>User Email</th>
+            <th>Email</th>
             <th>Status</th>
             <th colSpan="2" data-table="Action">Action</th>
           </tr>
@@ -23,7 +23,7 @@ const Tabledash = () => {
           <tr>
             <td data-table="User Id">001</td>
             <td data-table="User Name">John doe</td>
-            <td data-table="User Email">johndoe@gmail.com</td>
+            <td data-table="Email">johndoe@gmail.com</td>
             <td data-table="Status">Male</td>
             <td>
               <button className="btn_edit" data-table="Edit">Edit</button>
@@ -34,7 +34,7 @@ const Tabledash = () => {
           <tr>
              <td data-table="User Id">001</td>
             <td data-table="User Name">John doe</td>
-            <td data-table="User Email">johndoe@gmail.com</td>
+            <td data-table="Email">johndoe@gmail.com</td>
             <td data-table="Status">Male</td>
             <td>
               <button className="btn_edit" data-table="Edit">Edit</button>
@@ -45,7 +45,7 @@ const Tabledash = () => {
           <tr>
             <td data-table="User Id">001</td>
             <td data-table="User Name">John doe</td>
-            <td data-table="User Email">johndoe@gmail.com</td>
+            <td data-table="Email">johndoe@gmail.com</td>
             <td data-table="Status">Male</td>
             <td>
               <button className="btn_edit" data-table="Edit">Edit</button>
@@ -56,7 +56,7 @@ const Tabledash = () => {
           <tr>
             <td data-table="User Id">001</td>
             <td data-table="User Name">John doe</td>
-            <td data-table="User Email">johndoe@gmail.com</td>
+            <td data-table="Email">johndoe@gmail.com</td>
             <td data-table="Status">Male</td>
             <td>
               <button className="btn_edit" data-table="Edit">Edit</button>
@@ -67,7 +67,7 @@ const Tabledash = () => {
           <tr>
             <td data-table="User Id">001</td>
             <td data-table="User Name">John doe</td>
-            <td data-table="User Email">johndoe@gmail.com</td>
+            <td data-table="Email">johndoe@gmail.com</td>
             <td data-table="Status">Male</td>
             <td>
               <button className="btn_edit" data-table="Edit">Edit</button>
@@ -78,7 +78,7 @@ const Tabledash = () => {
           <tr>
             <td data-table="User Id">001</td>
             <td data-table="User Name">John doe</td>
-            <td data-table="User Email">johndoe@gmail.com</td>
+            <td data-table="Email">johndoe@gmail.com</td>
             <td data-table="Status">Male</td>
             <td>
               <button className="btn_edit" data-table="Edit">Edit</button>

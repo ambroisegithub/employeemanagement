@@ -46,13 +46,12 @@ body {
 }
 
 .chartContainer {
-    .chartRow {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 20px;
-        .chart {
-            box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.3);
-        }
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    .chartContainerRow {
+        background-color: white;
+        box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.3);
     }
 }
 
@@ -60,7 +59,6 @@ body {
     .HomeContainer {
         width: auto;
         height: auto;
-        // background-color: skyblue;
         .HomeRow {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -83,10 +81,11 @@ body {
         }
     }
     .chartContainer {
-        .chartRow {
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-        }
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .chartContainerRow {
+        width: 100%;
     }
 }
 
@@ -94,7 +93,6 @@ body {
     .HomeContainer {
         width: auto;
         height: auto;
-        // background-color: skyblue;
         .HomeRow {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -115,9 +113,10 @@ body {
         }
     }
     .chartContainer {
-        .chartRow {
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-        }
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .chartContainerRow {
+        width: 100%;
     }
 }

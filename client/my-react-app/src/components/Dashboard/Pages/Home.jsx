@@ -105,13 +105,22 @@ const  Home = ()=> {
       </div>
 
       <div className="chartContainer" style={{width:"auto",height:"auto",marginTop:"20px"}}>
-        <div className="chartRow">
-          <div className="chart" style={{width:"100%",height:"300px",borderRadius:"5px"}}>
-            <div style={{width:"90%",marginLeft:"20px"}}>
-              <Line data={data} options={options} ></Line>
-            </div>
-          </div>
-          <div className="chart" style={{width:"100%",height:"300px",borderRadius:"5px"}}></div>
+        {/* <div className="chartRow"  style={{width:"100%"}}>
+          
+          <div className="chart" style={{height:"400px",width:"675px"}}>
+          <Line data={data} options={options}  className='chart' style={{height:"100%"}}></Line>
+             </div>
+          <div className="chart" style={{height:"400px",width:"675px"}}> 
+          <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur enim harum ad repellat dolor nostrum reiciendis voluptas fugiat molestiae dolorum natus eum quidem, expedita esse dignissimos fuga officiis ullam neque!</h1></div>
+        </div> */}
+
+        <div className="chartContainerRow">
+        <Line data={data} options={options}  className='chart'  ></Line>
+
+        </div>
+        <div className="chartContainerRow" >
+        <Line data={data} options={options}  className='chart' ></Line>
+
         </div>
       </div>
 
