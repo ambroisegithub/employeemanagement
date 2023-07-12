@@ -2,7 +2,6 @@ import  { useState } from 'react';
 import PropTypes from 'prop-types';
 import { FaTh, FaUserAlt, FaRegChartBar, FaCommentAlt, FaShoppingBag, FaThList } from 'react-icons/fa';
 import {GrNotification} from 'react-icons/gr';
-
 import { AiOutlineMenu, AiOutlineClose} from 'react-icons/ai';
 import { NavLink } from 'react-router-dom';
 import  ProfileImage from "../image/user-profile-icon.png"

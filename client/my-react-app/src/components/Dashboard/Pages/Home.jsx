@@ -3,8 +3,60 @@ import {FaUsers} from "react-icons/fa"
 import {BsFillPeopleFill} from "react-icons/bs"
 import {GrMail} from "react-icons/gr"
 import {MdPostAdd} from "react-icons/md"
+import Tabledash from '../Tables/Tabledash';
+import {Line} from "react-chartjs-2";
+import {
+  Chart as ChartJS,
+  LineElement,
+  CategoryScale,
+  LinearScale,
+  PointElement
+} from "chart.js"
+     
+
+ChartJS.register(
+  LineElement,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+
+)
 
 const  Home = ()=> {
+  const data = {
+    labels:["May 12","May 12","May 12","May 12","May 12","May 12","May 12"],
+    datasets:[{
+      data:[8,7.8,6,8,7,5,6],
+      backgroundColor:'transparent',
+      borderColor:"red",
+      pointBorderColor:"transparent",
+      pointBorderWidth:"4",
+      tension:0.5
+    }]
+  };
+  const options={
+    plugins:{
+      legend:false
+    },
+    scales:{
+      x:{
+        grid:{
+          display:false
+        }
+      },
+      y:{
+        min:2,
+        max:10,
+        ticks:{
+          stepSize:2,
+          callback:(value)=>value + "k"
+        },
+        grid:{
+          borderDash:[10]
+        }
+      }
+    }
+  };
     return (
 
       <>
@@ -53,10 +105,19 @@ const  Home = ()=> {
 
       <div className="chartContainer" style={{width:"auto",height:"auto",marginTop:"20px"}}>
         <div className="chartRow">
-          <div className="chart" style={{width:"100%",height:"300px",borderRadius:"5px"}}></div>
+          <div className="chart" style={{width:"100%",height:"100%",borderRadius:"5px"}}>
+            {/* <div style={{width:"100%",height:"100%",marginLeft:"20px"}}>
+              <Line data={data} options={options}></Line>
+            </div> */}
+          </div>
           <div className="chart" style={{width:"100%",height:"300px",borderRadius:"5px"}}></div>
         </div>
       </div>
+
+      <div style={{width:"100%",height:"auto",border:"1px solid black",marginTop:"20px",borderRadius:"5px"}}>
+          <Tabledash/>          
+      </div> 
+
       </>
 
     )

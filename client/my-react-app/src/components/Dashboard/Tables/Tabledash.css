@@ -1,0 +1,102 @@
+.containerTable {
+    min-height: auto;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.containerTable h1 {
+    padding: 2rem 1rem;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.tbl {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tbl thead {
+    background-color: #424949;
+    color: white;
+}
+
+.tbl tr:hover td {
+    background-color: skyblue;
+    color: #000;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+}
+
+.tbl button {
+    display: inline-block;
+    border: none;
+    outline: none;
+    margin: 0 auto;
+    padding: 0.4rem;
+    border-radius: 1px;
+    cursor: pointer;
+    margin-left: 2px;
+}
+
+.btn_trash {
+    color: white;
+    background-color: red;
+    font-weight: 900;
+}
+
+.btn_edit {
+    color: white;
+    background-color: green;
+    font-weight: 900;
+}
+
+.tbl thead tr th {
+    color: white;
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+    padding: 0.8rem;
+    vertical-align: top;
+    border: 1 px solid #aab7b8;
+}
+
+.tbl tbody tr td {
+    text-align: center;
+    font-weight: normal;
+    letter-spacing: 0.2rem;
+    border: 1px solid #aab7ba;
+    font-size: 1rem;
+    padding: 0.8rem;
+}
+
+.tbl tr:nth-child(even) {
+    background: #ccc;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+}
+
+@media(max-width:768px) {
+    .tbl thead {
+        display: none;
+    }
+    .tbl tr,
+    .tbl td {
+        display: block;
+        width: auto;
+    }
+    .tbl tr {
+        margin-bottom: 1rem;
+    }
+    .tbl tbody tr td {
+        text-align: right;
+        position: relative;
+    }
+    .tbl td::before {
+        content: attr(data-table);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        text-align: left;
+        padding-left: 1.2rem;
+    }
+}
