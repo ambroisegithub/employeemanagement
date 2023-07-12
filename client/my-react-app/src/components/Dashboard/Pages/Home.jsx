@@ -24,11 +24,12 @@ ChartJS.register(
 
 const  Home = ()=> {
   const data = {
-    labels:["May 12","May 12","May 12","May 12","May 12","May 12","May 12"],
+    labels: ["Jan 01", "Feb 01", "Mar 01", "Apr 01", "May 01", "Jun 01", "Jul 01", "Aug 01", "Sep 01", "Oct 01", "Nov 01", "Dec 01"],
     datasets:[{
-      data:[8,7.8,6,8,7,5,6],
+      data:[1,10,2,8,7,2,8,2,8,2,5,1],
       backgroundColor:'transparent',
-      borderColor:"red",
+      color:'white',
+      borderColor:"#031427",
       pointBorderColor:"transparent",
       pointBorderWidth:"4",
       tension:0.5
@@ -105,10 +106,10 @@ const  Home = ()=> {
 
       <div className="chartContainer" style={{width:"auto",height:"auto",marginTop:"20px"}}>
         <div className="chartRow">
-          <div className="chart" style={{width:"100%",height:"100%",borderRadius:"5px"}}>
-            {/* <div style={{width:"100%",height:"100%",marginLeft:"20px"}}>
-              <Line data={data} options={options}></Line>
-            </div> */}
+          <div className="chart" style={{width:"100%",height:"300px",borderRadius:"5px"}}>
+            <div style={{width:"90%",marginLeft:"20px"}}>
+              <Line data={data} options={options} ></Line>
+            </div>
           </div>
           <div className="chart" style={{width:"100%",height:"300px",borderRadius:"5px"}}></div>
         </div>
