@@ -5,6 +5,7 @@ import bodyParser from "body-parser";
 import registerRoutes from "./routes/register";
 import employeeRoutes from "./routes/addemploye";
 import contactusRoutes from "./routes/contactus";
+import JobApplicationRoutes from "./routes/JobApplication"
 import addsalarytoemployeeRoutes from "./routes/addsalarytoemployee"
 
 
@@ -25,6 +26,7 @@ app.use("/api/v1", registerRoutes);
 app.use("/api/v1", employeeRoutes);
 app.use("/api/v1", contactusRoutes);
 app.use("/api/v1", addsalarytoemployeeRoutes);
+app.use("/api/v1", JobApplicationRoutes);
 
 
 

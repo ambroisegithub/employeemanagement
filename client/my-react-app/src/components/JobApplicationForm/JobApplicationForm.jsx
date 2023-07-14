@@ -225,7 +225,7 @@ const JobApplicationForm = () => {
 
               <div>
                 <p style={{ fontWeight: "900", fontSize: "15px", marginBottom: "10px" }}>
-                  Possible file types: DOC, PDF. Maximum file size: 10 MB.
+                  Possible file types: PDF. Maximum file size: 10 MB.
                 </p>
               </div>
 
