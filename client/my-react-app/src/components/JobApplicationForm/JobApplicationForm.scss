@@ -5,8 +5,155 @@ $navfooter:white;
 $textFont:13px;
 $font-family:Arial,
 sans-serif;
-.FormContainer {
-    width: 80%;
-    height: 100vh;
+.application_container {
+    width: 100%;
+    height: auto;
     background-color: $textcolor;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    .jobContainer {
+        padding-top: 50px;
+        display: flex;
+        padding-bottom: 70px;
+        background-color: #edeff1;
+        justify-content: center;
+        border-radius: 20px;
+        .JobcontainerOne {
+            .selectContainer {
+                width: 600px;
+                padding: 10px;
+                box-shadow: 0px 0px 2px 3px rgba(0, 0, 0, 0.3);
+                outline: none;
+                border: none;
+                border-radius: 10px;
+                margin-top: 10px;
+                cursor: pointer;
+                color: black;
+                font-weight: 700;
+                margin-bottom: 50px;
+            }
+        }
+        .selectContainer {
+            width: 580px;
+            padding: 10px;
+            box-shadow: 0px 0px 2px 3px rgba(0, 0, 0, 0.3);
+            outline: none;
+            border: none;
+            border-radius: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+            color: black;
+            font-weight: 700;
+        }
+    }
+    .address {
+        width: 580px;
+        padding: 10px;
+        box-shadow: 0px 0px 2px 3px rgba(0, 0, 0, 0.3);
+        outline: none;
+        border: none;
+        border-radius: 10px;
+        margin-top: 10px;
+        cursor: pointer;
+        color: black;
+        font-weight: 700;
+    }
+}
+
+.application_container {
+    .jobrow {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        .jobrow1 {
+            input {
+                width: 270px;
+                box-shadow: 0px 0px 2px 3px rgba(0, 0, 0, 0.3);
+                outline: none;
+                border: none;
+                border-radius: 10px;
+                margin-top: 10px;
+                cursor: pointer;
+                color: black;
+                font-weight: 700;
+                padding: 10px;
+                margin-bottom: 25px;
+            }
+        }
+    }
+    .applicationContainer {
+        .application {
+            .chooseImage {
+                width: 268px;
+                background-color: white;
+                padding: 10px;
+                box-shadow: 0px 0px 2px 3px rgba(0, 0, 0, 0.3);
+                border-radius: 10px;
+            }
+        }
+    }
+}
+
+@media(max-width:448px) {
+    .application_container {
+        .jobrow {
+            display: flex;
+            flex-direction: column;
+            .jobrow1 {
+                input {
+                    width: 300px;
+                }
+            }
+        }
+        .jobContainer {
+            display: flex;
+            justify-content: flex-start;
+            padding-left: 70px;
+            .JobcontainerOne {
+                .selectContainer {
+                    width: 300px;
+                }
+            }
+        }
+    }
+    .applicationContainer {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media(max-width:768px) {
+    .application_container {
+        .jobrow {
+            display: flex;
+            flex-direction: column;
+            .jobrow1 {
+                input {
+                    width: 300px;
+                }
+            }
+        }
+        .jobContainer {
+            display: flex;
+            justify-content: flex-start;
+            padding-left: 70px;
+            .JobcontainerOne {
+                .selectContainer {
+                    width: 310px;
+                }
+            }
+        }
+        .address {
+            width: 300px;
+        }
+    }
+    .applicationContainer {
+        display: flex;
+        flex-direction: column;
+        .chooseImage {
+            width: 500px;
+        }
+    }
 }
