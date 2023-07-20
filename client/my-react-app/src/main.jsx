@@ -16,7 +16,7 @@ import Product from './components/Dashboard/Pages/Product';
 import ProductList from './components/Dashboard/Pages/ProductList';
 import Blog from './components/Dashboard/Pages/Blog';
 import Home from './components/Dashboard/Pages/Home';
-
+import Applyrequest from "./components/Dashboard/Pages/Applyrequest";
 
 import './index.css';
 const Dashboard = () => {
@@ -30,6 +30,9 @@ const Dashboard = () => {
         <Route path="analytics" element={<Analytics />} />
         <Route path="product" element={<Product />} />
         <Route path="productList" element={<ProductList />} />
+        <Route path="Applyrequest" element={<Applyrequest />} />
+        
+
       </Routes>
     </Sidebar>
   );

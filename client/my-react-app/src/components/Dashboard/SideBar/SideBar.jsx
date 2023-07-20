@@ -1,6 +1,6 @@
 import  { useState } from 'react';
 import PropTypes from 'prop-types';
-import { FaTh, FaUserAlt, FaRegChartBar, FaCommentAlt, FaShoppingBag, FaThList } from 'react-icons/fa';
+import { FaTh, FaUserAlt, FaRegChartBar, FaCommentAlt, FaShoppingBag, FaThList,FaListOl } from 'react-icons/fa';
 import {GrNotification} from 'react-icons/gr';
 import { AiOutlineMenu, AiOutlineClose} from 'react-icons/ai';
 import { NavLink } from 'react-router-dom';
@@ -22,7 +22,7 @@ const SideBar = ({ children }) => {
 
   const menuItem = [
     {
-      path: '/dashboard/blog',
+      path: '/dashboard/',
       name: 'Dashboard',
       icon: <FaTh />,
     },
@@ -50,6 +50,13 @@ const SideBar = ({ children }) => {
       path: '/dashboard/productList',
       name: 'Product List',
       icon: <FaThList />,
+    },
+
+    {
+      
+      path: '/dashboard/Applyrequest',
+      name: 'Job Request',
+      icon: <FaListOl />,
     },
   ];
 

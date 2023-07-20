@@ -1,0 +1,298 @@
+$backgroundcolor:white;
+$buttoncolor:#03346b;
+$textcolor:#1a5e5f;
+$navfooter:white;
+$textFont:13px;
+$font-family:Arial,
+sans-serif;
+.containerTabl {
+    min-height: auto;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.containerTabl h1 {
+    padding: 2rem 1rem;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.tb {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tb thead {
+    background-color: $textcolor;
+    color: white;
+}
+
+.tb tr:hover td {
+    background-color: #031427;
+    color: white;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+}
+
+.tb button {
+    display: inline-block;
+    border: none;
+    outline: none;
+    margin: 0 auto;
+    padding: 0.4rem;
+    border-radius: 1px;
+    cursor: pointer;
+    margin-left: 2px;
+}
+
+.btn_tras {
+    color: white;
+    background-color: $textcolor;
+    font-weight: 900;
+}
+
+.btn_edi {
+    color: white;
+    background-color: $buttoncolor;
+    font-weight: 900;
+}
+
+.tb thead tr th {
+    color: white;
+    // font-size: 13px;
+    font-size: 0.9rem;
+    /* letter-spacing: 0.2rem; */
+    // padding: 0.8rem;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    vertical-align: top;
+    border: 1px solid #aab7b8;
+    font-weight: 900;
+}
+
+.tb tbody tr td {
+    /* text-align: center; */
+    font-weight: normal;
+    /* letter-spacing: 0.1rem; */
+    border: 1px solid #aab7ba;
+    font-size: 0.9rem;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 5px;
+    font-weight: 900;
+    padding-right: 5px;
+}
+
+.tb tr:nth-child(even) {
+    background: rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+}
+
+body.active-modal {
+    overflow-y: hidden;
+}
+
+.model {
+    position: fixed;
+    top: 100px;
+    left: 200px;
+    right: 200px;
+    //bottom: 100px;
+    display: flex;
+    justify-content: center;
+    //align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    //background-color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+}
+
+.model-content {
+    position: relative;
+    line-height: 1.4;
+    background-color: #e9e6e6;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 3px;
+    max-width: auto;
+    min-width: 90%;
+    /* Adjust the minimum width as needed */
+    max-height: 90%;
+    // padding-bottom: 100px;
+    // overflow: auto;
+    .EditSelect {
+        width: 550px;
+        outline: none;
+        padding: 7px;
+        box-shadow: 0px 0px 2px 4px rgba(0, 0, 0, 0.3);
+        border: none;
+        border-radius: 5px;
+    }
+}
+
+.close-model {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 7px;
+}
+
+.editContainer {
+    .editRow {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        .editRow1 {
+            display: flex;
+            flex-direction: column;
+            .input {
+                width: 250px;
+                padding: 7px;
+                outline: none;
+                box-shadow: 0px 0px 2px 4px rgba(0, 0, 0, 0.3);
+                border: none;
+                border-radius: 5px;
+            }
+            .inputaddress {
+                width: 536px;
+                padding: 7px;
+                outline: none;
+                box-shadow: 0px 0px 2px 4px rgba(0, 0, 0, 0.3);
+                border: none;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+@media(max-width:900px) {
+    .tb thead {
+        display: none;
+    }
+    .tb tr,
+    .tb td {
+        display: block;
+        width: auto;
+    }
+    .tbl tr {
+        margin-bottom: 1rem;
+    }
+    .tb tbody tr td {
+        text-align: right;
+        position: relative;
+    }
+    .tb td::before {
+        content: attr(data-table);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        text-align: left;
+        padding-left: 1.2rem;
+    }
+    .model {
+        position: fixed;
+        top: 100px;
+        left: 60px;
+        right: 60px;
+        // bottom: 100px;
+        display: flex;
+        justify-content: center;
+        // align-items: center;
+        background-color: rgba(0, 0, 0, 0.9);
+        // background-color: white;
+    }
+    .editContainer {
+        .editRow {
+            display: flex;
+            flex-direction: column;
+            .editRow1 {
+                display: flex;
+                flex-direction: column;
+                .inputaddress {
+                    width: 250px;
+                    padding: 10px;
+                    outline: none;
+                    box-shadow: 0px 0px 2px 4px rgba(0, 0, 0, 0.3);
+                    border: none;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+    .model-content {
+        .EditSelect {
+            width: 260px;
+        }
+    }
+}
+
+@media(max-width:955px) {
+    .editContainer {
+        .editRow {
+            display: flex;
+            flex-direction: column;
+            .editRow1 {
+                display: flex;
+                flex-direction: column;
+                .inputaddress {
+                    width: 250px;
+                    padding: 10px;
+                    outline: none;
+                    box-shadow: 0px 0px 2px 4px rgba(0, 0, 0, 0.3);
+                    border: none;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 1380px) {
+    .tb thead {
+        display: none;
+    }
+    .tb tr,
+    .tb td {
+        display: block;
+        width: auto;
+    }
+    .tbl tr {
+        margin-bottom: 1rem;
+    }
+    .tb tbody tr td {
+        text-align: right;
+        position: relative;
+    }
+    .tb td::before {
+        content: attr(data-table);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        text-align: left;
+        padding-left: 1.2rem;
+    }
+}
+
+@media (max-width:448px) {
+    .editContainer {
+        .editRow {
+            display: flex;
+            flex-direction: column;
+            .editRow1 {
+                display: flex;
+                flex-direction: column;
+                .inputaddress {
+                    width: 250px;
+                    padding: 10px;
+                    outline: none;
+                    box-shadow: 0px 0px 2px 4px rgba(0, 0, 0, 0.3);
+                    border: none;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}
