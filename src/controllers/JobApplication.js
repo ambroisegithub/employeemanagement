@@ -61,7 +61,6 @@ export const uploadFiles = async(req, res, next) => {
         await newFile.save();
 
         console.log(newFile)
-        console.log(newFile)
 
         res.status(201).json({
             message: "Files uploaded successfully",
@@ -164,6 +163,7 @@ export const updateFileById = async(req, res, next) => {
             });
         }
 
+
         file.job = job;
         file.firstname = firstname;
         file.familyname = familyname;
@@ -183,6 +183,7 @@ export const updateFileById = async(req, res, next) => {
             }
 
             if (req.files["curriculumVitae"]) {
+
                 const curriculumVitaeResult = await cloudinary.uploader.upload(req.files["curriculumVitae"][0].path);
                 file.curriculumVitae = curriculumVitaeResult.secure_url;
             }

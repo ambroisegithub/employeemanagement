@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose, { trusted } from "mongoose";
 const fileSchema = new mongoose.Schema({
 
     job: {
@@ -48,10 +48,7 @@ const fileSchema = new mongoose.Schema({
         required: [true, "City  Fiild Does Not Be Empty"]
     },
 
-    phone: {
-        type: String,
-        required: [true, "Phone  Fiild Does Not Be Empty"]
-    },
+
     zipcode: {
         type: String,
         required: [true, "ZipCode  Fiild Does Not Be Empty"]

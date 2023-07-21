@@ -96,33 +96,59 @@ body.active-modal {
 
 .model {
     position: fixed;
-    top: 100px;
-    left: 200px;
-    right: 200px;
-    //bottom: 100px;
+    top: 10px;
+    left: 0;
+    right: 0;
+    bottom: 0;
     display: flex;
     justify-content: center;
-    //align-items: center;
-    background-color: rgba(0, 0, 0, 0.9);
-    //background-color: white;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 10px;
+    align-items: center;
+    .closeButton {
+        display: flex;
+        float: right;
+        margin-left: -100px;
+        border: none;
+        outline: none;
+        padding: 3px;
+        background-color: white;
+        color: black;
+        font-weight: 900;
+        border-radius: 2px;
+        &:hover {
+            color: white;
+            background-color: #031427;
+            cursor: pointer;
+        }
+    }
+    .submitButtom {
+        border: none;
+        outline: none;
+        background: white;
+        color: black;
+        font-weight: 900;
+        padding: 10px;
+        border-radius: 5px;
+        &:hover {
+            color: white;
+            background-color: #031427;
+            cursor: pointer;
+        }
+    }
 }
 
 .model-content {
-    position: relative;
     line-height: 1.4;
-    background-color: #e9e6e6;
+    background-color: #8f9192;
     color: white;
     padding: 14px 28px;
     border-radius: 3px;
-    width: auto;
-    width: 90%;
-    /* Adjust the minimum width as needed */
-    height: auto;
-    // padding-bottom: 100px;
-    // overflow: auto;
+    max-width: 90%;
+    max-height: 90%;
+    overflow: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     .EditSelect {
         width: 550px;
         outline: none;
@@ -130,6 +156,8 @@ body.active-modal {
         box-shadow: 0px 0px 2px 4px rgba(0, 0, 0, 0.3);
         border: none;
         border-radius: 5px;
+        margin-top: 7px;
+        margin-bottom: 7px;
     }
 }
 
@@ -164,7 +192,27 @@ body.active-modal {
                 border: none;
                 border-radius: 5px;
             }
+            label {
+                color: black;
+                margin-bottom: 5px;
+                margin-top: 5px;
+                font-weight: 900;
+            }
+            .fileInput {
+                background: white;
+                color: black;
+                font-weight: 900;
+                padding: 5px;
+                box-shadow: 0px 0px 2px 4px rgba(0, 0, 0, 0.3);
+                border-radius: 3px;
+            }
         }
+    }
+    p {
+        color: black;
+        font-weight: 900;
+        margin-top: 5px;
+        margin-bottom: 5px;
     }
 }
 
