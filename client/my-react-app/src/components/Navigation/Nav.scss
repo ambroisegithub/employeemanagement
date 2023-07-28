@@ -1,6 +1,6 @@
 $backgroundcolor:white;
 $buttoncolor:#03346b;
-$textcolor:#79a4a5;
+$textcolor:#1a5e5f;
 $navfooter:white;
 $textFont:13px;
 $font-family:Arial,
@@ -52,10 +52,6 @@ li {
         transition: all 0.3s ease-in-out;
         font-family: $font-family;
         font-weight: 700;
-        -webkit-transition: all 0.3s ease-in-out;
-        -moz-transition: all 0.3s ease-in-out;
-        -ms-transition: all 0.3s ease-in-out;
-        -o-transition: all 0.3s ease-in-out;
     }
 }
 

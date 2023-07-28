@@ -1,5 +1,6 @@
 import jwt from "jsonwebtoken"
 import User from "../models/register"
+
 const Authorization = async(req, res, next) => {
     try {
         console.log(req.headers);
@@ -15,6 +16,7 @@ const Authorization = async(req, res, next) => {
                     message: "The operation are performed by admin"
                 });
             }
+
         } else {
             return res.status(401).json({
                 status: "failed",

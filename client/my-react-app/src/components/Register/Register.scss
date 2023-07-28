@@ -9,11 +9,6 @@
         width: 100%;
         height: 80vh;
         background-color: $textcolor;
-        // align-items: center;
-        // justify-content: center;
-        // text-align: center;
-        // padding-left: 10vh;
-        // padding-right: 20vh;
         padding-top: 5vh;
         padding-bottom: 5vh;
         .rowContainer {
@@ -33,10 +28,6 @@
                 width: 80%;
                 background-color: $textcolor;
                 border-radius: 10px;
-                -webkit-border-radius: 10px;
-                -moz-border-radius: 10px;
-                -ms-border-radius: 10px;
-                -o-border-radius: 10px;
                 width: 80%;
                 color: #fff;
             }
@@ -101,7 +92,7 @@
                 width: 70%;
                 padding-bottom: 10px;
                 margin-bottom: 20px;
-                color: $textcolor;
+                color: white;
                 font-weight: 800;
             }
             .simply {
@@ -137,13 +128,9 @@
                 border: none;
                 border:2px solid $textcolor;
                 border-radius:5px;
-                -webkit-border-radius:5px;
-                -moz-border-radius:5px;
-                -ms-border-radius:5px;
-                -o-border-radius:5px;
                 &:hover {
                     background-color: white;
-                    // color: $textcolor;
+                    color: $textcolor;
                 }
             }
             .whoare {
@@ -155,9 +142,9 @@
                 background-color: white;
             }
             .radioContainer {
-                display: flex;
-                flex-direction: row;
-                gap: 5px;
+                // display: flex;
+                // flex-direction: row;
+                // gap: 5px;
                 .radioInput {
                     color: white;
                     font-weight: 700;
@@ -167,10 +154,6 @@
                     width: 122px;
                     border: 2px solid $textcolor;
                     border-radius: 5px;
-                    -webkit-border-radius: 5px;
-                    -moz-border-radius: 5px;
-                    -ms-border-radius: 5px;
-                    -o-border-radius: 5px;
                 }
             }
             .name,
@@ -200,10 +183,6 @@
                 background-color: $textcolor;
                 cursor: pointer;
                 font-weight: 800;
-                -webkit-border-radius: 5px;
-                -moz-border-radius: 5px;
-                -ms-border-radius: 5px;
-                -o-border-radius: 5px;
                 &:hover {
                     background-color: white;
                     color: $buttoncolor;
@@ -231,10 +210,6 @@
                     color: $textcolor;
                     font-weight: 900;
                     border-radius: 5px;
-                    -webkit-border-radius: 5px;
-                    -moz-border-radius: 5px;
-                    -ms-border-radius: 5px;
-                    -o-border-radius: 5px;
                     padding: 5px;
                     &:hover {
                         color: white;

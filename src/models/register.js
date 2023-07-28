@@ -3,6 +3,13 @@ import validator from "validator";
 import bcrypt from "bcryptjs";
 
 const Userschema = new mongoose.Schema({
+
+
+    Usertype: {
+        type: String,
+        enum: ["admin", "employee", "manager"],
+        default: "admin",
+    },
     username: {
         type: String,
         required: [true, "The name is required"],
@@ -19,11 +26,7 @@ const Userschema = new mongoose.Schema({
         maxLength: 100,
         select: false,
     },
-    Usertype: {
-        type: String,
-        enum: ["admin", "employee", "manager"],
-        default: "admin",
-    },
+
     gender: {
         type: String,
         enum: ["male", "female"],

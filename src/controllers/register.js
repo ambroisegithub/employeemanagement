@@ -3,7 +3,6 @@ import dotenv from "dotenv"
 import crypto from "crypto"
 import nodemailer from "nodemailer";
 
-import { body, validationResult } from 'express-validator';
 dotenv.config()
 import User from "../models/register"
 
@@ -33,8 +32,6 @@ export const signup = async(req, res) => {
             token: token,
             user: newUser,
         });
-
-
 
         const verificationCode = Math.floor(100000 + Math.random() * 900000).toString();
         const mailOptions = {
