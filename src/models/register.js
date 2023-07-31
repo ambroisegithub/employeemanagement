@@ -3,8 +3,6 @@ import validator from "validator";
 import bcrypt from "bcryptjs";
 
 const Userschema = new mongoose.Schema({
-
-
     Usertype: {
         type: String,
         enum: ["admin", "employee", "manager"],
@@ -26,7 +24,6 @@ const Userschema = new mongoose.Schema({
         maxLength: 100,
         select: false,
     },
-
     gender: {
         type: String,
         enum: ["male", "female"],
@@ -34,7 +31,6 @@ const Userschema = new mongoose.Schema({
     },
     passwordResetToken: String,
     passwordResetExpires: Date,
-
 });
 
 Userschema.pre("save", async function(next) {
@@ -44,10 +40,10 @@ Userschema.pre("save", async function(next) {
     next();
 });
 
-Userschema.methods.correctPassword = async function(cpassword, password) {
-    return await bcrypt.compare(cpassword, password);
+Userschema.methods.correctPassword = async function(candidatePassword, userPassword) {
+    return await bcrypt.compare(candidatePassword, userPassword);
 };
 
-const user = mongoose.model("User", Userschema);
+const User = mongoose.model("User", Userschema);
 
-export default user;
+export default User;
