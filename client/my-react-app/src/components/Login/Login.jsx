@@ -77,6 +77,9 @@ const Login = ()=>{
     const HandleNavigate = () => {
       navigate("/Signup");
     };
+    const HandleNavigateforget =()=>{
+    navigate("/Forget")
+    }
     return(
         <>
         <div>
@@ -111,10 +114,14 @@ const Login = ()=>{
                                        {passwordError && <p className="error">{passwordError}</p>}
                                      <br/>
                                      {loginError && <p className="error">{loginError}</p>}
+                                     <div className="twobutton">
                                      <button type="submit" className="login1">Login</button>
                                      <br></br>
-                                     <span  className="alreadyhaveaccount">Do Not Have An Account  &nbsp;<button onClick={HandleNavigate}>Signup?</button></span>
-                                     <h3>Or</h3>
+                                     <button className="forgetPassword" onClick={HandleNavigateforget}>Forget Password</button>
+                                     <br />
+                                     </div>
+                                     <span  className="alreadyhaveaccount"  >Do Not Have An Account  &nbsp;<button onClick={HandleNavigate}>Signup?</button></span>
+                                     <br />
                                     <button  type="submit" className="googleButton">
                                     <img src={googleIcon}></img>
                                     <p  className="continuewithGoogle">Continue With Google Account!!!</p>

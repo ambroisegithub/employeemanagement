@@ -5,6 +5,35 @@ $navfooter:white;
 $textFont:13px;
 $font-family:Arial;
 $sidebarcolor: #031427;
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+}
+
+main {
+    width: 100%;
+    padding: 20px;
+}
+
+.bars {
+    display: flex;
+    font-size: 25px;
+    margin-left: 50px;
+}
+
+.link {
+    display: flex;
+    color: #fff;
+    padding: 10px 15px;
+    gap: 15px;
+    transition: all 0.5s;
+}
+
 body {
     box-sizing: border-box;
     margin: 0;

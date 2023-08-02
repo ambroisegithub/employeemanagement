@@ -5,6 +5,8 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import App from './App';
 import Login from './components/Login/Login';
+import Forget from './components/Forget/Forget';
+
 import Register from './components/Register/Register';
 import JobApplicationForm from './components/JobApplicationForm/JobApplicationForm';
 import DiscoverJobPosition from './components/DiscoverJobPosition/DiscoverJobPosition';
@@ -46,6 +48,7 @@ ReactDOM.render(
         <Route path="/" element={<App />} />
         <Route path="/Signup" element={<Register />} />
         <Route path="/Login" element={<Login />} />
+        <Route path="/Forget" element={<Forget />} />
         <Route path="/DiscoverJob" element={<DiscoverJobPosition />} />
         <Route path="/JobApplicationForm" element={<JobApplicationForm />} />
         <Route path="/dashboard/*" element={<Dashboard />} />
