@@ -200,7 +200,7 @@ const Register = ()=>{
                             <input
                                 type="text"
                                 id="email"
-                                name="email"
+                                name="email"  
                                 className="email"
                                 placeholder="Email"
                                 value={user.email}

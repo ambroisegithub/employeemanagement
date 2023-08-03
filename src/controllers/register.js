@@ -162,8 +162,6 @@ export const getOneUser = async(req, res) => {
     }
 };
 
-
-
 export const forgotPassword = async(req, res) => {
     try {
         const { email } = req.body;
@@ -178,27 +176,25 @@ export const forgotPassword = async(req, res) => {
         }
 
         // Generate a reset token
-        const resetToken = crypto.randomBytes(32).toString("hex");
+        const token = crypto.randomBytes(32).toString("hex");
 
         // Save the reset token and expiration time in the user document
         user.passwordResetToken = crypto
             .createHash("sha256")
-            .update(resetToken)
+            .update(token)
             .digest("hex");
         user.passwordResetExpires = Date.now() + 10 * 60 * 1000; // 10 minutes
 
         await user.save();
 
         // Send the password reset email
-        const resetUrl = `${req.protocol}://${req.get(
-        "host"
-      )}/api/v1/reset-password/${resetToken}`;
-        const message = `Forgot your password? Submit a PATCH request with your new password and passwordConfirm to: ${resetUrl}.\nIf you didn't forget your password, please ignore this email!`;
+        const resetUrl = `${process.env.CLIENT_URL}/reset-password/${token}`;
+        const message = `Forgot your password? Click the link below to reset your password:\n${resetUrl}\nIf you didn't forget your password, please ignore this email!`;
 
         const mailOptions = {
             from: process.env.EMAIL_USER,
             to: email,
-            subject: "Your password reset token (valid for 10 minutes)",
+            subject: "Your password reset link (valid for 10 minutes)",
             text: message,
         };
 
@@ -215,7 +211,6 @@ export const forgotPassword = async(req, res) => {
         });
     }
 };
-
 export const resetPassword = async(req, res) => {
     try {
         const { token } = req.params;
@@ -263,8 +258,6 @@ export const resetPassword = async(req, res) => {
         });
     }
 };
-
-
 // Delete all users
 export const deleteAllUsers = async(req, res) => {
     try {
